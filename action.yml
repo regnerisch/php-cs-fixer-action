@@ -1,0 +1,12 @@
+name: Action for PHP CS Fixer
+description: Let PHP CS Fixer fix your code after every push!
+inputs:
+  path:
+    description: 'Path to directory or file to fix'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
